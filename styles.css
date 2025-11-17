@@ -477,6 +477,117 @@ blockquote {
   gap: 0.9rem;
 }
 
+.spark-panel {
+  padding: clamp(1.5rem, 3vw, 2.8rem);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(140deg, rgba(255, 111, 216, 0.22), rgba(102, 246, 255, 0.18))
+              , radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.15), transparent 55%)
+              , rgba(8, 4, 32, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 45px 90px rgba(3, 2, 24, 0.55);
+}
+
+.spark-panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(480px 380px at 85% 10%, rgba(102, 246, 255, 0.25), transparent 70%);
+  mix-blend-mode: screen;
+  opacity: 0.8;
+}
+
+.spark-panel > * {
+  position: relative;
+  z-index: 1;
+}
+
+.spark-panel h3 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+}
+
+.spark-panel__summary {
+  font-size: 1.05rem;
+  color: var(--text);
+}
+
+.spark-panel__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 1rem 0 1.5rem;
+}
+
+.spark-chip {
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.spark-panel__list {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.spark-panel__list li {
+  list-style: none;
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-start;
+  color: var(--muted);
+}
+
+.spark-panel__list svg {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  color: var(--brand-electric);
+}
+
+.phase-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 720px) {
+  .phase-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}
+
+.phase-card {
+  padding: 1.4rem;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(8, 6, 28, 0.85);
+  box-shadow: 0 25px 70px rgba(3, 2, 24, 0.45);
+  display: grid;
+  gap: 0.6rem;
+}
+
+.phase-card__eyebrow {
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--brand-amber);
+}
+
+.phase-card__icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  display: grid;
+  place-items: center;
+  color: var(--brand-violet);
+  font-size: 1.2rem;
+}
+
 .team-photo {
   width: 100%;
   border-radius: var(--radius-lg);
