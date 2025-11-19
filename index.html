@@ -327,7 +327,11 @@
 <div class="embedded-game">
 <div class="embedded-game__shell" aria-label="Rise of Orpheus playable demo">
 <div class="embedded-game__frame">
-<iframe src="/game/rise-of-orpheus.php" title="Rise of Orpheus social slot" loading="lazy"></iframe>
+<iframe id="orpheus-frame" data-src="https://released.playngonetwork.com/casino/ContainerLauncher?pid=2&amp;gid=riseoforpheus&amp;lang=en_GB&amp;practice=1&amp;channel=desktop&amp;demo=2" src="https://released.playngonetwork.com/casino/ContainerLauncher?pid=2&amp;gid=riseoforpheus&amp;lang=en_GB&amp;practice=1&amp;channel=desktop&amp;demo=2" title="Rise of Orpheus social slot" loading="lazy" referrerpolicy="no-referrer"></iframe>
+</div>
+<div class="embedded-game__actions">
+<button type="button" data-refresh-orpheus>Restart game</button>
+<button type="button" onclick="window.scrollTo({top: document.getElementById('community').offsetTop, behavior: 'smooth'});">Visit community</button>
 </div>
 <p class="muted" style="margin-top:1rem;">For entertainment purposes only. Must be 18+. Need a pause? Visit the <a href="/responsible-play/">Responsible Play Center</a>.</p>
 </div>
@@ -433,6 +437,17 @@
 </a>
 </div>
 </footer>
-<!-- Layout refreshed: tiny marker for versioning -->
+  <script>
+    (function() {
+      const refreshBtn = document.querySelector('[data-refresh-orpheus]');
+      const frame = document.getElementById('orpheus-frame');
+      if (refreshBtn && frame) {
+        const reset = () => frame.src = frame.dataset.src;
+        refreshBtn.addEventListener('click', reset);
+      }
+    })();
+  </script>
+
+  <!-- Layout refreshed: tiny marker for versioning -->
 </body>
 </html>

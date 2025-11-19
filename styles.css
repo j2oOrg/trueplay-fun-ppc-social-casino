@@ -513,6 +513,30 @@ blockquote {
   border-radius: inherit;
 }
 
+.embedded-game__actions {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.embedded-game__actions button {
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 0.55rem 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.embedded-game__actions button:hover,
+.embedded-game__actions button:focus-visible {
+  background: rgba(255, 255, 255, 0.18);
+}
+
 .hero__grid {
   display: grid;
   gap: clamp(2rem, 4vw, 3.5rem);
