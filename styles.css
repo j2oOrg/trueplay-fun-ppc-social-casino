@@ -148,6 +148,27 @@ blockquote {
   backdrop-filter: blur(18px);
 }
 
+.site-disclaimer {
+  background: linear-gradient(120deg, rgba(255, 111, 130, 0.95), rgba(255, 174, 89, 0.9));
+  color: #0a0404;
+  padding: 0.75rem 1.5rem;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+}
+
+.site-disclaimer p {
+  margin: 0;
+  color: inherit;
+}
+
+.site-disclaimer a {
+  color: inherit;
+  text-decoration: underline;
+  font-weight: 700;
+}
+
 .header__inner {
   display: flex;
   align-items: center;
